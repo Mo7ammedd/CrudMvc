@@ -1,0 +1,27 @@
+﻿@model Department
+
+@{
+    ViewBag.Title = "title";
+}
+
+<h2>Are You Sure You Want To Delete?</h2>
+<br/>
+<br/>
+
+<form asp-controller="Department" asp-action="Delete" method="post">
+    <input type="hidden" asp-for="Id" />
+    <div class="form-group">
+        <label asp-for="Code"></label>
+        <input asp-for="Code" class="form-control" disabled />
+    </div>
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" disabled />
+    </div>
+    <div class="form-group">
+        <label asp-for="DateOfCreation"></label>
+        <input asp-for="DateOfCreation" class="form-control" disabled />
+    </div>
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a asp-controller="Department" asp-action="Index" class="btn btn-primary">Back to List</a>
+</form>

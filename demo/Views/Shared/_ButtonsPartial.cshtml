@@ -1,0 +1,20 @@
+﻿@model int
+@{
+    var controller = ViewData["Controller"] as string;
+}
+
+<td>
+    <a asp-controller="@controller" asp-action="Details" asp-route-id="@Model" class="btn btn-warning">
+        <i class="fas fa-eye"></i> Details
+    </a>
+</td>
+<td>
+    <a asp-controller="@controller" asp-action="Edit" asp-route-id="@Model" class="btn btn-success">
+        <i class="fas fa-edit"></i> Update
+    </a>
+</td>
+<td>
+    <a asp-controller="@controller" asp-action="Delete" asp-route-id="@Model" class="btn btn-danger">
+        <i class="fas fa-trash"></i> Delete
+    </a>
+</td>

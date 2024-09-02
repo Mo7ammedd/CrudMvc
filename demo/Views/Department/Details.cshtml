@@ -1,0 +1,27 @@
+﻿@model Department
+
+@{
+    ViewBag.Title = "title";
+}
+
+<h2>Department Details</h2>
+<br/>
+<br/>
+<div asp-action="Create">
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Code"></label>
+        <input asp-for="Code" class="form-control" readonly/>
+    </div>
+    <div class="form-group">
+        <label class="col-form-label" asp-for="Name"></label>
+        <input asp-for="Name" class="form-control" readonly/>
+    </div>
+    <div class="form-group">
+        <label class="col-form-label" asp-for="DateOfCreation"></label>
+        <input asp-for="DateOfCreation" class="form-control" readonly/>
+    </div>
+    <a asp-action="Edit" asp-route="@Model.Id" class="btn btn-secondary">Edit</a>
+    <input type="submit" value="create" class="btn btn-primary"/>
+    <a asp-action="Index" class="btn btn-light">Back to list</a>
+    
+</div>
